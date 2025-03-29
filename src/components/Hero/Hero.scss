@@ -1,0 +1,87 @@
+@use "../../partials/_styles.scss" as *;
+@use "../../partials/_fonts.scss" as *;
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__title{
+    padding-bottom: 0.5rem;
+  }
+
+  &__description {
+    background-color: $secondary;
+    border-radius: 20%;
+    padding: 1rem;
+    line-height: 1.85rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__description-container {
+    padding: 1rem 0 1rem 2rem;
+  }
+&__paragraph-bold{
+    font-weight: 700;
+    font-style: italic;
+}
+
+  &__img {
+    border-radius: 20%;
+
+    @include tablet {
+      width: 60%;
+    }
+  }
+
+  &__button-container{
+   align-self: center;
+  }
+  &__button , &__button2{
+    width: 8.75rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: $secondary;
+    color: $primary;
+    font-family: "Poppins";
+
+    border: 2px solid $primary;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+
+    &:hover {
+        background-color: $accent;
+    }
+
+    @include tablet {
+        width: 160px;
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+&__button{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}
+&__button2{
+    
+    @include tablet{
+        display: none;
+    }
+}
+}

@@ -1,0 +1,77 @@
+@use "../../partials/_styles.scss" as *;
+@use "../../partials/_fonts.scss" as *;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $primary-background;
+    position: relative;
+
+    &__logo {
+       
+        height: 5rem;
+        align-self: center;
+      border: 3px solid $secondary;
+      border-radius: 10%;
+    }
+
+   
+    &__hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: $primary;
+            transition: 0.3s;
+        }
+
+       
+        .open:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .open:nth-child(2) {
+            opacity: 0;
+        }
+        .open:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    
+    &__mobile-menu {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: $primary-background;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
+        ul {
+            list-style: none;
+            padding: 1rem 0;
+
+            li {
+                padding: 1rem;
+                font-size: 1.2rem;
+
+                a {
+                    color: $primary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+    .nav__mobile-menu.active {
+        display: block;
+    }
+}
+
