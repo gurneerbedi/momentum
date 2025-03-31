@@ -47,3 +47,47 @@ flex-wrap: wrap;
     margin-bottom: 1rem;
 }
 }
+
+.grade-tabs{
+    display: flex;
+    gap: 0.5rem;
+   flex-wrap: wrap;
+   margin: 1rem;
+
+    @include tablet{
+        
+        gap: 1rem;
+       justify-content: center;
+    }
+   
+ 
+    button{
+
+
+     width: 6rem;
+     border-radius: 25px;
+     
+        font-size: 1rem;
+        background-color: white;
+        color: $primary;
+        font-family: "Poppins";
+    
+        border: 2px solid $primary;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 1rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 2rem;
+
+        @include tablet{
+            width: 8rem;
+            border-radius: 50px;
+        }
+        
+
+        &:hover, &.active{
+            background-color: $accent;
+        }
+    }
+   
+}
