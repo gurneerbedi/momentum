@@ -1,0 +1,30 @@
+
+@use "../../partials/_styles.scss" as *;
+@use "../../partials/_fonts.scss" as *;
+
+
+.testimonial-card {
+    padding: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+}
+
+.testimonials__title{
+    margin: 1rem;
+}
+
+
+.color-0 {
+    background-color: #f0f8ff; 
+}
+
+.color-1 {
+    background-color: #fffacd; 
+}
+
+.color-2 {
+    background-color: #e6ffe6; 
+}
