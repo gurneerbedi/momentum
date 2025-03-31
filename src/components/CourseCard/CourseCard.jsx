@@ -1,9 +1,10 @@
 import { useState } from "react";
+import "./CourseCard.scss";
 
 function CourseCard() {
 
-    const[ selectedGrade, setSelectedGraded] = useState(null);
-    const [ filteredCourses, setFilteredCourses] = useState(null);
+    const[ selectedGrade, setSelectedGrade] = useState("All");
+    // const [ filteredCourses, setFilteredCourses] = useState(null);
 
     const courses = [
         {
@@ -136,15 +137,34 @@ function CourseCard() {
     }
 ]
 
+const filteredCourses = selectedGrade === "All"
+? courses
+: courses.filter(course => course.grade === selectedGrade);
+
 return (
     <>
-     <div className="courses">
-     </div>
-    <section className="card-list" id="projects">
-        {courses.map((course) => (
-            <div key = {course.id} className="course-container">
-                <h1>{course.title}</h1>
-                <p>{course.description}</p>
+
+<div className="grade-tabs">
+                {["All", 9, 10, 11, 12].map((grade) => (
+                    <button 
+                        key={grade} 
+                        className={selectedGrade === grade ? "active" : ""} 
+                        onClick={() => setSelectedGrade(grade)}
+                    >
+                        {grade === "All" ? "All Grades" : `Grade ${grade}`}
+                    </button>
+                ))}
+            </div>
+  
+    <section className="courses" id="projects">
+        {filteredCourses.map((course) => (
+            <div key = {course.id} className="courses__container">
+                <div className="courses__details">
+                <h1 className="courses__title">{course.title}</h1>
+                <p className="courses__code">{course.coursecode}</p>
+                {/* <p className="courses__description">{course.description}</p> */}
+                </div>
+                
             </div>
         ))}
         </section>
