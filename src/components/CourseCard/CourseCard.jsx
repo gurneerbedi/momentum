@@ -145,6 +145,8 @@ const filteredCourses = selectedGrade === "All"
 return (
     <>
 
+    <div ><h1 className="heading">Our Courses</h1></div>
+
 <div className="grade-tabs">
                 {["All", 9, 10, 11, 12].map((grade) => (
                     <button 
@@ -165,10 +167,13 @@ return (
                 <p className="courses__code">{course.coursecode}</p>
                 {expandedCourse === course.id && (<p className="courses__description">{course.description}</p>)}
                 {/* <p className="courses__description">{course.description}</p> */}
-                </div>
+                </div> 
                 
             </div>
+            
         ))}
+        <div className="note">Tutoring for Grades 5-8 <br></br><br></br>
+        We offer personalized tutoring for all subjects in grades 5-8, even if they aren't listed in the course offerings. Whether your child needs help with math, science, or any other subject, we tailor each session to their needs and provide support in a variety of areas.</div>
         </section>
                        
     

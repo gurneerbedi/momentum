@@ -1,0 +1,35 @@
+@use "../../partials/_styles.scss" as *;
+@use "../../partials/_fonts.scss" as *;
+
+.prices{
+
+    &__container{
+        background-color: $secondary-background;
+        width: 75%;
+        border-radius: 20px;
+        padding: .75rem;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        box-shadow: 10px 5px 10px $accent;
+    
+    }
+   
+   &__details{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    }
+
+    &__price{
+        font-weight: 600;
+    }
+
+    &__sessionnote{
+        margin-top: 1rem;
+        font-weight: 600;
+        
+    }
+}
