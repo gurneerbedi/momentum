@@ -5,6 +5,7 @@ function CourseCard() {
 
     const[ selectedGrade, setSelectedGrade] = useState("All");
     // const [ filteredCourses, setFilteredCourses] = useState(null);
+    const [expandedCourse, setExpandedCourse] = useState(null);
 
     const courses = [
         {
@@ -158,10 +159,11 @@ return (
   
     <section className="courses" id="projects">
         {filteredCourses.map((course) => (
-            <div key = {course.id} className="courses__container">
+            <div key = {course.id} className="courses__container" onClick={() => setExpandedCourse(expandedCourse === course.id ? null : course.id)}>
                 <div className="courses__details">
                 <h1 className="courses__title">{course.title}</h1>
                 <p className="courses__code">{course.coursecode}</p>
+                {expandedCourse === course.id && (<p className="courses__description">{course.description}</p>)}
                 {/* <p className="courses__description">{course.description}</p> */}
                 </div>
                 
