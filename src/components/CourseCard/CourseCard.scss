@@ -104,3 +104,10 @@ flex-wrap: wrap;
 .heading{
     margin: 1rem;
 }
+.heading-container{
+    display: flex;
+    align-items: center;
+}
+.heading-img{
+    width: 8rem;
+}

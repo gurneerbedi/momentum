@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import pencilimg from "/images/pencil.png";
+
 
 
 function Testimonials(){
@@ -11,7 +13,7 @@ function Testimonials(){
         {
             id: 1,
             author: "Adam",
-            comment: "My experience with Gurneer has been incredible. She has been tutoring me since Grade 11 to my first of undergraduate. I have imporved my math skills and gained new confidence. Gurneer is supportive, willing to help, punctual and very kind.",
+            comment: "My experience with Gurneer has been incredible. She has been tutoring me since Grade 11 to my first year of undergraduate. I have improved my math skills and gained new confidence. Gurneer is supportive, willing to help, punctual and very kind.",
         },
         {
             id: 2,
@@ -21,12 +23,15 @@ function Testimonials(){
         {
             id: 3,
             author: "Anureet",
-            comment: "Gurneer is an exceptionally patient and understanding teacher. She made sure that concepts were well understood, and offered many approaches and insights in order to completely cover each topic until you're comportable. She taught me Advanced functions and Calculus & vectors and I passed with a 98% in both!",
+            comment: "Gurneer is an exceptionally patient and understanding teacher. She made sure that concepts were well understood, and offered many approaches and insights in order to completely cover each topic until you're comfortable. She taught me Advanced functions and Calculus & vectors and I passed with a 98% in both!",
         }
     ]
     return<>
 <section className="testimonials">
+    <div className="testimonials__container">
             <h2 className="testimonials__title">Our Stories</h2>
+            <img className="testimonials__img" src={pencilimg} alt="pencil image" />
+            </div>
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true }}

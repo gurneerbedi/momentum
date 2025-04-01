@@ -10,10 +10,26 @@
     margin: 0 auto;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
     width: 80%;
+
+}
+.testimonials{
+ 
+
+&__title{
+    margin: 1rem;
 }
 
-.testimonials__title{
-    margin: 1rem;
+&__container{
+    display: flex;
+    align-items: center;
+}
+
+&__img{
+
+   width: 15rem;
+    
+   
+}
 }
 
 

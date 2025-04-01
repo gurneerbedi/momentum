@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CourseCard.scss";
+import capimg from "/images/cap.png";
 
 function CourseCard() {
 
@@ -145,7 +146,7 @@ const filteredCourses = selectedGrade === "All"
 return (
     <>
 
-    <div ><h1 className="heading">Our Courses</h1></div>
+    <div className="heading-container"><h1 className="heading">Our Courses</h1><img className = "heading-img"src={capimg} alt="cap img" /></div>
 
 <div className="grade-tabs">
                 {["All", 9, 10, 11, 12].map((grade) => (

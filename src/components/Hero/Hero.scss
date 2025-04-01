@@ -10,6 +10,7 @@
   @include tablet {
     flex-direction: row;
     gap: 2rem;
+   
   }
 
   &__title{
@@ -25,7 +26,10 @@
     @include tablet {
       flex-direction: column;
       height: fit-content;
+      align-self: center;
+      
     }
+   
   }
 
   &__description-container {
