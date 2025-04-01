@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero.jsx'
 import CourseCard from "./components/CourseCard/CourseCard.jsx"
 import Prices from "./components/Prices/Prices.jsx"
 import Testimonials from './components/Testimonials/Testimonials.jsx'
+import Calendar from './components/Calendar/Calendar.jsx'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
     <CourseCard/>
     <Prices/>
     <Testimonials/>
+    <Calendar></Calendar>
     </>
   )
 }
