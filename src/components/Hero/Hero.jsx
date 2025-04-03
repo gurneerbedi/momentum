@@ -9,7 +9,7 @@ function Hero() {
                     <div className = "homepage__description-container">
                <h1 className="homepage__title">Momentum</h1>
                <p className="homepage__paragraph"> Through expert tutoring and personalized learning, we’re <span className="homepage__paragraph-bold">Empowering Minds, Igniting Momentum </span> - helping students thrive today and lead tomorrow. </p>
-               <button className="homepage__button">Learn More</button>
+               <button className="homepage__button"><a href="courses"></a>Learn More</button>
                </div>
                </div>
                <img className ="homepage__img"src={HeroImg} alt="Hero Img" />
